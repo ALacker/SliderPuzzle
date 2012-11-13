@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <title>Slider Game</title>
+        
+		
+    <%= stylesheet_link_tag "application" %>
+		<%= javascript_include_tag "application" %>
+
+		<script>
+  		  $(document).ready(function () {
+            setGrid(<%= @grid %>);
+  			    newGame();
+  			    
+            $('body').keydown(function (e) {
+  			   	   keyboardMove(e.keyCode);
+            });
+
+            $('table#game').mousedown(function (e) {
+                mouseMove(e.target.getAttribute("id"));
+            });
+		    });
+  	</script>
+    </head>
+    
+    <body>
+		    <div id="wrapper">
+            <div id="image">
+                <input type="image" src="/assets/image1.png" onclick="setImage('numbers')">
+                <input type="image" src="/assets/image2.png" onclick="setImage('screenshot')">
+            </div>
+
+            <div id="play">
+                <p>Optimal Moves: <%= @s %></p>
+                <p id="moves">Moves: 0</p>
+                <table id="game">
+                </table>
+                <button onclick="resetCurrent()">Reset Game</button>  
+                <%= button_to 'New Game', {:action => 'newGame'} %>
+            </div>
+
+            <div id="instructions">Choose an image</div>
+        <div>
+    </body>
+</html>

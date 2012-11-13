@@ -1,0 +1,70 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	text-align: center;
+	font-family: sans-serif;
+}
+
+p{
+	padding: 1em;
+}
+
+form.button_to{
+	display:inline;
+	margin:0;
+	padding:0;
+}
+
+form.button_to div{
+	display:inline;
+}
+
+div#wrapper{
+	margin-top:10%;
+}
+
+div#instructions{
+	color:666;
+	padding:2em;
+}
+
+div#error{
+	display: none;
+	color: red;
+	font-style: italic;
+}
+
+div#image input{
+	padding:2em;
+}
+
+div#play{
+	display: none;
+}
+
+table{
+	border-collapse: collapse;
+	border: 1px solid black;
+	margin: 30px auto 30px auto;
+	table-layout: fixed;
+}
+
+table#matrixSolved{
+	display: none;
+}
+
+td{
+	width: 2em;
+	height: 2em;
+	border: 1px solid black;
+	padding: .5em;
+	margin: 0;
+	text-align: center;
+}
+
+td.group1{
+	background-color: #CCC;
+}
